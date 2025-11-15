@@ -2,15 +2,11 @@ package com.elitech.model;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+
 
 @Entity
-public class Student {
-	@Id
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private int id;
+public class Student extends BaseEntity {
+	
 	@Column(nullable = false)
 	private String nom;
 	@Column(nullable = false)
@@ -45,12 +41,7 @@ public class Student {
 	public void setAge(int age) {
 		this.age = age;
 	}
-	public int getId() {
-		return id;
-	}
-	public void setId(int id) {
-		this.id = id;
-	}
+
 	public String getTelephone() {
 		return telephone;
 	}
